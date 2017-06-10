@@ -8,10 +8,10 @@
     <body>
         <div id='wrapper'>
             <h1>Page Counter</h1><br>
-            <p> Page Counter: <strong>{{ session['counter'] }}</strong> </p>
+            <p> Page Counter (this session): <strong>{{ session['counter'] }}</strong> </p>
         </div>
-        <form method="POST" action="/">
-            <input type="hidden" name="ticker" value="register1">
+        <form method="POST" action="/plustwo">
+            <input type="submit" name="plustwo" value="plustwo">
         </form>
     </body>
 </html>

@@ -20,4 +20,12 @@ def sessionCounter():
 def homepage():
     sessionCounter()
     return render_template('counter.html')
+
+@app.route('/plustwo', methods=['post'])
+def plustwo():
+    print "got post info"
+    print request.form
+    session['counter'] += 2
+    return render_template('counter.html', )
+
 app.run(debug=True)
