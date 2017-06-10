@@ -25,7 +25,14 @@ def homepage():
 def plustwo():
     print "got post info"
     print request.form
-    session['counter'] += 2
-    return render_template('counter.html', )
+    session['counter'] += 1
+    return redirect('/')
+
+@app.route('/reset', methods=['post'])
+def resetcounter():
+    print "got post info"
+    print request.form
+    session['counter'] = 0
+    return redirect('/')
 
 app.run(debug=True)
